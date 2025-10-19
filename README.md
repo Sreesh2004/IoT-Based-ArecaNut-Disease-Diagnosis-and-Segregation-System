@@ -56,25 +56,23 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 
 ## 💡 YOLOv8 Architecture (Simplified)
 
-<img width="1472" height="704" alt="Gemini_Generated_Image_n2pkfkn2pkfkn2pk" src="https://github.com/user-attachments/assets/d3ab6179-b566-458f-b26c-00b9a937837c" />
+<img width="1400" height="650" alt="Gemini_Generated_Image_n2pkfkn2pkfkn2pk" src="https://github.com/user-attachments/assets/d3ab6179-b566-458f-b26c-00b9a937837c" />
 
-  - A[Input Image 640×640] --> B[Backbone (CSPDarknet)]
+  - A [Input Image 640×640] --> B [Backbone (CSPDarknet)]
   
-  - B --> C[Neck (PAN-FPN)]
+  - B --> C [Neck (PAN-FPN)]
   
-  - C --> D[Head (Detection Layers)]
+  - C --> D [Head (Detection Layers)]
   
-  - D --> E[Bounding Boxes + Class Probabilities]
+  - D --> E [Bounding Boxes + Class Probabilities]
 
  **Subgraph Details**
  
-    - B -->|C2f + Conv Layers| F[Feature Extraction]
+    B -->| C2f + Conv Layers | F[Feature Extraction]
     
-    - C -->|Multi-scale Fusion| G[Feature Pyramid]
+    C -->| Multi-scale Fusion | G[Feature Pyramid]
     
-    - D -->|3 Scales| H[Small / Medium / Large Object Detection]
-    
-  end
+    D -->| 3 Scales | H[Small / Medium / Large Object Detection]
 
 
 
@@ -155,7 +153,7 @@ Classes: Healthy / Unhealthy
 
 ## 🧩 Block Diagram
 
-<img width="1031" height="668" alt="image" src="https://github.com/user-attachments/assets/3062de8e-ab0e-423a-8fa9-a1d0bad664d2" />
+<img width="1000" height="678" alt="image" src="https://github.com/user-attachments/assets/3062de8e-ab0e-423a-8fa9-a1d0bad664d2" />
 
   - A[Camera] --> B[Raspberry Pi 3B+]
   
@@ -187,7 +185,7 @@ Classes: Healthy / Unhealthy
 
 ## ⚙️ System Status & Conveyor Setup
 
-<img width="591" height="490" alt="image" src="https://github.com/user-attachments/assets/e8e4deee-a966-424e-b7ff-b89ee1f6fa7b" />      <img width="555" height="490" alt="image" src="https://github.com/user-attachments/assets/36ed4aa1-5d2e-425b-9b46-ea881d0c553f" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/e8e4deee-a966-424e-b7ff-b89ee1f6fa7b" />      <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/36ed4aa1-5d2e-425b-9b46-ea881d0c553f" />
 
 <img width="738" height="526" alt="image" src="https://github.com/user-attachments/assets/b506af88-721b-456e-89ad-39e0aadc39d7" />
 
