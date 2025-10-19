@@ -37,7 +37,6 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 
 ## 🧩 System Architecture
 
-```mermaid
 flowchart LR
   Camera[USB Camera] --> Pi[Raspberry Pi 3B+]
   Pi --> YOLO[YOLOv8 Model Inference]
@@ -49,7 +48,8 @@ flowchart LR
 
 ---
 
-**##** 💡 YOLOv8 Architecture (Simplified)
+💡 YOLOv8 Architecture (Simplified)
+<img width="1472" height="704" alt="Gemini_Generated_Image_n2pkfkn2pkfkn2pk" src="https://github.com/user-attachments/assets/d3ab6179-b566-458f-b26c-00b9a937837c" />
 flowchart TD
   A[Input Image 640×640] --> B[Backbone (CSPDarknet)]
   B --> C[Neck (PAN-FPN)]
@@ -60,7 +60,6 @@ flowchart TD
     C -->|Multi-scale Fusion| G[Feature Pyramid]
     D -->|3 Scales| H[Small / Medium / Large Object Detection]
   end
-<img width="1472" height="704" alt="Gemini_Generated_Image_n2pkfkn2pkfkn2pk" src="https://github.com/user-attachments/assets/d3ab6179-b566-458f-b26c-00b9a937837c" />
 
 ---
 
