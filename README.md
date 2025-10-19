@@ -8,17 +8,20 @@
 [![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-3B%2B-red)]()
 [![Status](https://img.shields.io/badge/Status-Prototype-yellow)]()
 
+
 ## 🚀 Project Overview
 
 This project presents a **low-cost, IoT-enabled vision system** that automatically detects and classifies areca nuts as **healthy** or **diseased** using **YOLOv8**.  
 
 It replaces manual sorting with an automated conveyor-based segregation setup and enables **remote operation via Ethernet communication** using **VNC Viewer** and **PuTTY**.
 
+
 ## 🎯 Objectives
 
 - Detect and classify areca nuts using **real-time image processing**.  
 - Automate sorting through a **conveyor mechanism** controlled by relays.  
 - Enable **remote communication and monitoring** via **Ethernet (VNC Viewer + PuTTY)**.
+
 
 ## ⚙️ Problem Identification & Solution
 
@@ -28,91 +31,89 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 | Missed detection of subtle symptoms (Koleroga, nut borer, fungal issues). | Use **trained YOLOv8 model** on diverse dataset for reliable detection. |
 | No affordable automation for small farmers. | Build **low-cost Raspberry Pi system** integrated with relay-based conveyor. |
 
+
 ## 🧩 System Architecture
 
-  Camera[USB Camera] --> Pi[Raspberry Pi 3B+]
+  - Camera[USB Camera] --> Pi[Raspberry Pi 3B+]
   
-  Pi --> YOLO[YOLOv8 Model Inference]
+  - Pi --> YOLO[YOLOv8 Model Inference]
   
-  YOLO --> Decision[Classification Logic]
+  - YOLO --> Decision[Classification Logic]
   
-  Decision --> Relay[Relay Module]
+  - Decision --> Relay[Relay Module]
   
-  Relay --> Motor[Conveyor Motor]
+  - Relay --> Motor[Conveyor Motor]
   
-  Pi -->|Ethernet| VNC[VNC Viewer (Remote Desktop)]
+  - Pi -->|Ethernet| VNC[VNC Viewer (Remote Desktop)]
   
-  Pi -->|Ethernet| PuTTY[PuTTY (SSH Control)]
+  - Pi -->|Ethernet| PuTTY[PuTTY (SSH Control)]
 
-💡 YOLOv8 Architecture (Simplified)
+
+## 💡 YOLOv8 Architecture (Simplified)
 
 <img width="1472" height="704" alt="Gemini_Generated_Image_n2pkfkn2pkfkn2pk" src="https://github.com/user-attachments/assets/d3ab6179-b566-458f-b26c-00b9a937837c" />
 
-  A[Input Image 640×640] --> B[Backbone (CSPDarknet)]
+  - A[Input Image 640×640] --> B[Backbone (CSPDarknet)]
   
-  B --> C[Neck (PAN-FPN)]
+  - B --> C[Neck (PAN-FPN)]
   
-  C --> D[Head (Detection Layers)]
+  - C --> D[Head (Detection Layers)]
   
-  D --> E[Bounding Boxes + Class Probabilities]
-  
- **subgraph Details**
+  - D --> E[Bounding Boxes + Class Probabilities]
+
+ **Subgraph Details**
  
-    B -->|C2f + Conv Layers| F[Feature Extraction]
+    - B -->|C2f + Conv Layers| F[Feature Extraction]
     
-    C -->|Multi-scale Fusion| G[Feature Pyramid]
+    - C -->|Multi-scale Fusion| G[Feature Pyramid]
     
-    D -->|3 Scales| H[Small / Medium / Large Object Detection]
+    - D -->|3 Scales| H[Small / Medium / Large Object Detection]
     
   end
 
----
 
-🔌 IoT Communication (Ethernet)
+## 🔌 IoT Communication (Ethernet)
 
-VNC Viewer → remote GUI access to Raspberry Pi desktop.
+- VNC Viewer → remote GUI access to Raspberry Pi desktop.
 
-PuTTY (SSH) → terminal-based control, monitoring, and file transfer.
+- PuTTY (SSH) → terminal-based control, monitoring, and file transfer.
 
-Ethernet ensures reliable connectivity and low latency compared to Wi-Fi.
+- Ethernet ensures reliable connectivity and low latency compared to Wi-Fi.
 
----
 
-🧠 Hardware Setup
+## 🧠 Hardware Setup
 
-Raspberry Pi 3 Model B+
+- Raspberry Pi 3 Model B+
 
-USB Camera (≥ 640x480 p)
+- USB Camera (≥ 640x480 p)
 
-Conveyor mechanism
+- Conveyor mechanism
 
-Relay module
+- Relay module
 
-Gear motor (DC)
+- Gear motor (DC)
 
-Power supply (12 V)
+- Power supply (12 V)
 
-Ethernet cable for communication
+- Ethernet cable for communication
 
----
 
-💻 Software Stack
+## 💻 Software Stack
 
-Python 3.11 +
+- Python 3.11 +
 
-YOLOv8 (Ultralytics)
+- YOLOv8 (Ultralytics)
 
-TensorFlow / OpenCV
+- TensorFlow / OpenCV
 
-Raspberry Pi OS 64 Bit 
+- Raspberry Pi OS 64 Bit 
 
-Google Colab (for training) --> https://colab.research.google.com/drive/1y_Pll2h5nWtQkqxRwwx6mqZJzxmFDZtM?usp=drive_link
+- Google Colab (for training) --> https://colab.research.google.com/drive/1y_Pll2h5nWtQkqxRwwx6mqZJzxmFDZtM?usp=drive_link
 
-VNC Viewer and PuTTY (for Ethernet control)
+- VNC Viewer and PuTTY (for Ethernet control)
 
----
 
-📊 Dataset & Performance
+## 📊 Dataset & Performance
 
 Dataset Size: ~2700 areca nut images
 Classes: Healthy / Unhealthy
@@ -125,67 +126,60 @@ Classes: Healthy / Unhealthy
 | Macro Avg      | 0.92      | 0.93   | 0.92     |
 | Weighted Avg   | 0.92      | 0.93   | 0.93     |
 
----
 
-🔄 Workflow Summary
+## 🔄 Workflow Summary
 
 <img width="666" height="818" alt="image" src="https://github.com/user-attachments/assets/8ab450e8-0733-4c16-b300-eb2c55f548cf" />
 
-Image captured by USB Camera.
+- Image captured by USB Camera.
 
-YOLOv8 performs detection & classification.
+- YOLOv8 performs detection & classification.
 
-Decision logic triggers corresponding relay output.
+- Decision logic triggers corresponding relay output.
 
-Motor drives conveyor to segregate nuts.
+- Motor drives conveyor to segregate nuts.
 
-System accessible remotely via Ethernet (VNC Viewer + PuTTY).
+- System accessible remotely via Ethernet (VNC Viewer + PuTTY).
 
----
 
-🧩 Block Diagram
+## 🧩 Block Diagram
 
 <img width="1031" height="668" alt="image" src="https://github.com/user-attachments/assets/3062de8e-ab0e-423a-8fa9-a1d0bad664d2" />
 
-flowchart LR
+  - A[Camera] --> B[Raspberry Pi 3B+]
+  
+  - B --> C[YOLOv8 Detection]
+  
+  - C --> D[Classification Output]
+  
+  - D --> E[Relay Control]
+  
+  - E --> F[Motor/Conveyor]
+  
+  - B -->|Ethernet| G[VNC Viewer + PuTTY]
 
-  A[Camera] --> B[Raspberry Pi 3B+]
-  
-  B --> C[YOLOv8 Detection]
-  
-  C --> D[Classification Output]
-  
-  D --> E[Relay Control]
-  
-  E --> F[Motor/Conveyor]
-  
-  B -->|Ethernet| G[VNC Viewer + PuTTY]
 
----
+## 🌱 Sustainable Development Goals
 
-🌱 Sustainable Development Goals
-
-SDG	Target	Relevance
+**SDG	Target	Relevance**
 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/afdeb190-399a-4936-9a15-b653340d1fc5" />
 
-SDG 9	Upgrade infrastructure & retrofit industries for sustainability.	Integrates IoT + AI in rural agro-processing. 
+**SDG 9	Upgrade infrastructure & retrofit industries for sustainability.	Integrates IoT + AI in rural agro-processing.**
 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/3665c96c-20b7-42e3-9c9e-ea22af47c3ea" />
 
-SDG 12	Halve global food waste by 2030.	Reduces post-harvest losses via automated disease removal.
+**SDG 12	Halve global food waste by 2030.	Reduces post-harvest losses via automated disease removal.**
 
----
 
-⚙️ System Status & Conveyor Setup
+## ⚙️ System Status & Conveyor Setup
 
 <img width="591" height="490" alt="image" src="https://github.com/user-attachments/assets/e8e4deee-a966-424e-b7ff-b89ee1f6fa7b" />      <img width="555" height="490" alt="image" src="https://github.com/user-attachments/assets/36ed4aa1-5d2e-425b-9b46-ea881d0c553f" />
 
 <img width="738" height="526" alt="image" src="https://github.com/user-attachments/assets/b506af88-721b-456e-89ad-39e0aadc39d7" />
 
----
 
-🧭 Scope & Innovation
+## 🧭 Scope & Innovation
 
 Combines camera-based detection, YOLOv8 inference, and IoT Ethernet connectivity.
 
@@ -195,7 +189,7 @@ Promotes sustainable rural automation and improved product quality.
 
 ---
 
-📚 References
+## 📚 References
 
 Rajendra A. B. et al., Areca Nut Disease Detection Using Image Processing, Soft Computing Applications (2020).
 
@@ -209,7 +203,7 @@ Zeng G., Fruit and Vegetables Classification Using CNN, IEEE ITOEC (2017).
 
 ---
 
-✉️ Contact
+## ✉️ Contact
 
 Created by SREESH T N 
 
