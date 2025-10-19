@@ -50,6 +50,7 @@ flowchart LR
 
 💡 YOLOv8 Architecture (Simplified)
 <img width="1472" height="704" alt="Gemini_Generated_Image_n2pkfkn2pkfkn2pk" src="https://github.com/user-attachments/assets/d3ab6179-b566-458f-b26c-00b9a937837c" />
+
 flowchart TD
   A[Input Image 640×640] --> B[Backbone (CSPDarknet)]
   B --> C[Neck (PAN-FPN)]
@@ -63,3 +64,32 @@ flowchart TD
 
 ---
 
+🔌 IoT Communication (Ethernet)
+
+VNC Viewer → remote GUI access to Raspberry Pi desktop.
+PuTTY (SSH) → terminal-based control, monitoring, and file transfer.
+Ethernet ensures reliable connectivity and low latency compared to Wi-Fi.
+
+🧠 Hardware Setup
+
+Raspberry Pi 3B+
+USB Camera (≥ 480 p)
+Conveyor mechanism
+Relay module
+Gear motor (DC)
+Power supply (12 V)
+Ethernet cable for communication
+
+💻 Software Stack
+
+Python 3.8 +
+YOLOv8 (Ultralytics)
+TensorFlow / OpenCV
+Raspberry Pi OS
+Google Colab (for training)
+VNC Viewer and PuTTY (for Ethernet control)
+
+📊 Dataset & Performance
+
+Dataset Size: ~1300 areca nut images
+Classes: Healthy / Unhealthy
