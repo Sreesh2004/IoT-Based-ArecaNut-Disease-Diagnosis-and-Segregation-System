@@ -1,0 +1,9 @@
+# Copy your trained model file here
+# 
+# Expected file: best.pt
+# 
+# This should be the model file from your training:
+# - yolo_severe_focused/normal_vs_severe_severefocus2/weights/best.pt
+# 
+# Copy command example:
+# cp /path/to/your/trained/model/best.pt ./best.pt
