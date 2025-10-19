@@ -9,11 +9,13 @@
 [![Status](https://img.shields.io/badge/Status-Prototype-yellow)]()
 
 
+
 ## 🚀 Project Overview
 
 This project presents a **low-cost, IoT-enabled vision system** that automatically detects and classifies areca nuts as **healthy** or **diseased** using **YOLOv8**.  
 
 It replaces manual sorting with an automated conveyor-based segregation setup and enables **remote operation via Ethernet communication** using **VNC Viewer** and **PuTTY**.
+
 
 
 ## 🎯 Objectives
@@ -23,6 +25,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 - Enable **remote communication and monitoring** via **Ethernet (VNC Viewer + PuTTY)**.
 
 
+
 ## ⚙️ Problem Identification & Solution
 
 | Problem | Proposed Solution |
@@ -30,6 +33,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 | Manual sorting is slow, inconsistent, and error-prone. | Introduce **automated vision-based classification** using CNN / YOLOv8. |
 | Missed detection of subtle symptoms (Koleroga, nut borer, fungal issues). | Use **trained YOLOv8 model** on diverse dataset for reliable detection. |
 | No affordable automation for small farmers. | Build **low-cost Raspberry Pi system** integrated with relay-based conveyor. |
+
 
 
 ## 🧩 System Architecture
@@ -47,6 +51,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
   - Pi -->|Ethernet| VNC[VNC Viewer (Remote Desktop)]
   
   - Pi -->|Ethernet| PuTTY[PuTTY (SSH Control)]
+
 
 
 ## 💡 YOLOv8 Architecture (Simplified)
@@ -72,6 +77,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
   end
 
 
+
 ## 🔌 IoT Communication (Ethernet)
 
 - VNC Viewer → remote GUI access to Raspberry Pi desktop.
@@ -79,6 +85,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 - PuTTY (SSH) → terminal-based control, monitoring, and file transfer.
 
 - Ethernet ensures reliable connectivity and low latency compared to Wi-Fi.
+
 
 
 ## 🧠 Hardware Setup
@@ -98,6 +105,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 - Ethernet cable for communication
 
 
+
 ## 💻 Software Stack
 
 - Python 3.11 +
@@ -111,6 +119,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 - Google Colab (for training) --> https://colab.research.google.com/drive/1y_Pll2h5nWtQkqxRwwx6mqZJzxmFDZtM?usp=drive_link
 
 - VNC Viewer and PuTTY (for Ethernet control)
+
 
 
 ## 📊 Dataset & Performance
@@ -127,6 +136,7 @@ Classes: Healthy / Unhealthy
 | Weighted Avg   | 0.92      | 0.93   | 0.93     |
 
 
+
 ## 🔄 Workflow Summary
 
 <img width="666" height="818" alt="image" src="https://github.com/user-attachments/assets/8ab450e8-0733-4c16-b300-eb2c55f548cf" />
@@ -140,6 +150,7 @@ Classes: Healthy / Unhealthy
 - Motor drives conveyor to segregate nuts.
 
 - System accessible remotely via Ethernet (VNC Viewer + PuTTY).
+
 
 
 ## 🧩 Block Diagram
@@ -159,6 +170,7 @@ Classes: Healthy / Unhealthy
   - B -->|Ethernet| G[VNC Viewer + PuTTY]
 
 
+
 ## 🌱 Sustainable Development Goals
 
 **SDG	Target	Relevance**
@@ -172,11 +184,13 @@ Classes: Healthy / Unhealthy
 **SDG 12	Halve global food waste by 2030.	Reduces post-harvest losses via automated disease removal.**
 
 
+
 ## ⚙️ System Status & Conveyor Setup
 
 <img width="591" height="490" alt="image" src="https://github.com/user-attachments/assets/e8e4deee-a966-424e-b7ff-b89ee1f6fa7b" />      <img width="555" height="490" alt="image" src="https://github.com/user-attachments/assets/36ed4aa1-5d2e-425b-9b46-ea881d0c553f" />
 
 <img width="738" height="526" alt="image" src="https://github.com/user-attachments/assets/b506af88-721b-456e-89ad-39e0aadc39d7" />
+
 
 
 ## 🧭 Scope & Innovation
@@ -187,7 +201,7 @@ Affordable and scalable for small to mid-sized areca nut processors.
 
 Promotes sustainable rural automation and improved product quality.
 
----
+
 
 ## 📚 References
 
@@ -201,7 +215,7 @@ Kanan L. V. et al., Arecanut Yield Disease Forecast Using IoT and ML, IJSRET (20
 
 Zeng G., Fruit and Vegetables Classification Using CNN, IEEE ITOEC (2017).
 
----
+
 
 ## ✉️ Contact
 
