@@ -1,6 +1,6 @@
 # IoT-Based Areca Nut Disease Diagnosis and Segregation System
 
-<img width="1184" height="864" alt="Gemini_Generated_Image_otfoo5otfoo5otfo" src="https://github.com/user-attachments/assets/6990d117-4ac6-4ca4-be08-12db7c10c24a" />
+<img width="1184" height="864" alt="Gemini_Generated_Image_otfoo5otfoo5otfo" src="https://github.com/user-attachments/assets/6990d117-4ac6-4ca4-be08-12db7c10c24a" /> 
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)]()
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)]()
