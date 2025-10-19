@@ -82,7 +82,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 
 - PuTTY (SSH) → terminal-based control, monitoring, and file transfer.
 
-- Ethernet ensures reliable connectivity and low latency compared to Wi-Fi.                     <img width="351" height="351" alt="image" src="https://github.com/user-attachments/assets/23d5099e-fb2d-4cee-a985-27299ab6ac43" />
+- Ethernet ensures reliable connectivity and low latency compared to Wi-Fi.
 
 
 
