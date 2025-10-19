@@ -181,11 +181,13 @@ Classes: Healthy / Unhealthy
 
 **SDG	Target	Relevance**
 
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/afdeb190-399a-4936-9a15-b653340d1fc5" />
+<img width="175" height="166" alt="image" src="https://github.com/user-attachments/assets/eef56d01-ba67-40f5-876a-124ac93c2319" />
+
 
 **SDG 9	Upgrade infrastructure & retrofit industries for sustainability.	Integrates IoT + AI in rural agro-processing.**
 
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/3665c96c-20b7-42e3-9c9e-ea22af47c3ea" />
+<img width="175" height="166" alt="image" src="https://github.com/user-attachments/assets/70c7cab2-2016-4bb7-95b8-6af05244de7d" />
+
 
 **SDG 12	Halve global food waste by 2030.	Reduces post-harvest losses via automated disease removal.**
 
