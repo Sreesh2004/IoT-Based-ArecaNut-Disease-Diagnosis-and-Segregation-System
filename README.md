@@ -38,19 +38,19 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 
 ## 🧩 System Architecture
 
-  - Camera[USB Camera] --> Pi[Raspberry Pi 3B+]
+  - Camera [USB Camera] --> Pi [Raspberry Pi 3B+]
   
-  - Pi --> YOLO[YOLOv8 Model Inference]
+  - Pi --> YOLO [YOLOv8 Model Inference]
   
-  - YOLO --> Decision[Classification Logic]
+  - YOLO --> Decision [Classification Logic]
   
-  - Decision --> Relay[Relay Module]
+  - Decision --> Relay [Relay Module]
   
-  - Relay --> Motor[Conveyor Motor]
+  - Relay --> Motor [Conveyor Motor]
   
-  - Pi -->|Ethernet| VNC[VNC Viewer (Remote Desktop)]
+  - Pi --> |Ethernet| VNC [VNC Viewer (Remote Desktop)]
   
-  - Pi -->|Ethernet| PuTTY[PuTTY (SSH Control)]
+  - Pi --> |Ethernet| PuTTY [PuTTY (SSH Control)]
 
 
 
@@ -68,11 +68,11 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 
  **Subgraph Details**
  
-    B -->| C2f + Conv Layers | F[Feature Extraction]
+    B --> | C2f + Conv Layers | F[Feature Extraction]
     
-    C -->| Multi-scale Fusion | G[Feature Pyramid]
+    C --> | Multi-scale Fusion | G[Feature Pyramid]
     
-    D -->| 3 Scales | H[Small / Medium / Large Object Detection]
+    D --> | 3 Scales | H[Small / Medium / Large Object Detection]
 
 
 
@@ -82,7 +82,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 
 - PuTTY (SSH) → terminal-based control, monitoring, and file transfer.
 
-- Ethernet ensures reliable connectivity and low latency compared to Wi-Fi.
+- Ethernet ensures reliable connectivity and low latency compared to Wi-Fi.                     <img width="351" height="351" alt="image" src="https://github.com/user-attachments/assets/23d5099e-fb2d-4cee-a985-27299ab6ac43" />
 
 
 
@@ -132,6 +132,14 @@ Classes: Healthy / Unhealthy
 | Accuracy       | —         | —      | 0.93     |
 | Macro Avg      | 0.92      | 0.93   | 0.92     |
 | Weighted Avg   | 0.92      | 0.93   | 0.93     |
+
+
+
+## 🎯 Accuracy & Confusion Matrix
+
+<img width="618" height="550" alt="image" src="https://github.com/user-attachments/assets/cb112047-be81-4db2-8308-a06261d170dd" />            <img width="661" height="547" alt="image" src="https://github.com/user-attachments/assets/a41856c4-0b31-44b3-9687-8d37c679994c" />
+
+<img width="618" height="550" alt="image" src="https://github.com/user-attachments/assets/d429bd03-f0f2-412e-a0f9-4b6b5382b7db" />
 
 
 
