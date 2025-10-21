@@ -124,6 +124,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 ## 📊 Dataset & Performance
 
 Dataset Size: ~2700 areca nut images
+
 Classes: Healthy / Unhealthy
 
 | Class          | Precision(%) | Recall(%) | F1-Score(%) |
