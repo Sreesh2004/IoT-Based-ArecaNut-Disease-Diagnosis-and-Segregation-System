@@ -59,7 +59,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 
 <img width="1400" height="650" alt="Gemini_Generated_Image_n2pkfkn2pkfkn2pk" src="https://github.com/user-attachments/assets/d3ab6179-b566-458f-b26c-00b9a937837c" />
 
-  - A [Input Image 640×640] --> B [Backbone (CSPDarknet)]
+  - A [Input Image 640×480] --> B [Backbone (CSPDarknet)]
   
   - B --> C [Neck (PAN-FPN)]
   
@@ -91,7 +91,7 @@ It replaces manual sorting with an automated conveyor-based segregation setup an
 
 - Raspberry Pi 3 Model B+
 
-- USB Camera (≥ 640x480 p)
+- USB Camera (≥ 640×480 p)
 
 - Conveyor mechanism
 
